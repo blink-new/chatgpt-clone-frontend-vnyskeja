@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { Button } from './ui/button'
 import { Textarea } from './ui/textarea'
-import { PaperAirplaneIcon } from '@heroicons/react/24/solid'
+import { Send } from 'lucide-react'
 
 interface ChatInputProps {
   onSendMessage: (message: string) => void
@@ -70,7 +70,7 @@ export function ChatInput({
                 transition-colors
               "
             >
-              <PaperAirplaneIcon className="w-4 h-4" />
+              <Send className="w-4 h-4" />
             </Button>
           </div>
           

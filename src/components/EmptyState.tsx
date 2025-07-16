@@ -1,8 +1,8 @@
 import { 
-  SunIcon, 
-  BoltIcon, 
-  ExclamationTriangleIcon 
-} from '@heroicons/react/24/outline'
+  Sun, 
+  Zap, 
+  AlertTriangle 
+} from 'lucide-react'
 
 const examples = [
   "Explain quantum computing in simple terms",
@@ -40,7 +40,7 @@ export function EmptyState({ onExampleClick }: EmptyStateProps) {
           {/* Examples */}
           <div className="text-center">
             <div className="flex justify-center mb-4">
-              <SunIcon className="w-6 h-6 text-white" />
+              <Sun className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-lg font-medium text-white mb-4">Examples</h3>
             <div className="space-y-2">
@@ -62,7 +62,7 @@ export function EmptyState({ onExampleClick }: EmptyStateProps) {
           {/* Capabilities */}
           <div className="text-center">
             <div className="flex justify-center mb-4">
-              <BoltIcon className="w-6 h-6 text-white" />
+              <Zap className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-lg font-medium text-white mb-4">Capabilities</h3>
             <div className="space-y-2">
@@ -83,7 +83,7 @@ export function EmptyState({ onExampleClick }: EmptyStateProps) {
           {/* Limitations */}
           <div className="text-center">
             <div className="flex justify-center mb-4">
-              <ExclamationTriangleIcon className="w-6 h-6 text-white" />
+              <AlertTriangle className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-lg font-medium text-white mb-4">Limitations</h3>
             <div className="space-y-2">

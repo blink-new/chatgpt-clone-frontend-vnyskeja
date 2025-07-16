@@ -2,13 +2,13 @@ import { useState } from 'react'
 import { Button } from './ui/button'
 import { ScrollArea } from './ui/scroll-area'
 import { 
-  PlusIcon, 
-  ChatBubbleLeftIcon, 
-  PencilIcon, 
-  TrashIcon,
-  Bars3Icon,
-  XMarkIcon
-} from '@heroicons/react/24/outline'
+  Plus, 
+  MessageSquare, 
+  Edit3, 
+  Trash2,
+  Menu,
+  X
+} from 'lucide-react'
 
 interface Chat {
   id: string
@@ -87,7 +87,7 @@ export function ChatSidebar({
             onClick={onNewChat}
             className="flex-1 bg-transparent border border-white/20 text-white hover:bg-white/10 h-11"
           >
-            <PlusIcon className="w-4 h-4 mr-2" />
+            <Plus className="w-4 h-4 mr-2" />
             New chat
           </Button>
           <Button
@@ -96,7 +96,7 @@ export function ChatSidebar({
             onClick={onToggle}
             className="lg:hidden ml-2 text-white hover:bg-white/10"
           >
-            <XMarkIcon className="w-5 h-5" />
+            <X className="w-5 h-5" />
           </Button>
         </div>
 
@@ -113,7 +113,7 @@ export function ChatSidebar({
                 `}
                 onClick={() => onChatSelect(chat.id)}
               >
-                <ChatBubbleLeftIcon className="w-4 h-4 mr-3 text-white/70 flex-shrink-0" />
+                <MessageSquare className="w-4 h-4 mr-3 text-white/70 flex-shrink-0" />
                 
                 {editingChat === chat.id ? (
                   <input
@@ -152,7 +152,7 @@ export function ChatSidebar({
                     }}
                     className="w-6 h-6 p-0 text-white/70 hover:text-white hover:bg-white/20"
                   >
-                    <PencilIcon className="w-3 h-3" />
+                    <Edit3 className="w-3 h-3" />
                   </Button>
                   <Button
                     variant="ghost"
@@ -163,7 +163,7 @@ export function ChatSidebar({
                     }}
                     className="w-6 h-6 p-0 text-white/70 hover:text-red-400 hover:bg-white/20"
                   >
-                    <TrashIcon className="w-3 h-3" />
+                    <Trash2 className="w-3 h-3" />
                   </Button>
                 </div>
               </div>
@@ -192,7 +192,7 @@ export function ChatSidebar({
         size="sm"
         className="fixed top-4 left-4 z-30 lg:hidden bg-white/10 text-white hover:bg-white/20"
       >
-        <Bars3Icon className="w-5 h-5" />
+        <Menu className="w-5 h-5" />
       </Button>
     </>
   )

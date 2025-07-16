@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { Button } from './ui/button'
 import { 
-  ClipboardDocumentIcon, 
-  ArrowPathIcon,
-  HandThumbUpIcon,
-  HandThumbDownIcon
-} from '@heroicons/react/24/outline'
+  Copy, 
+  RotateCcw,
+  ThumbsUp,
+  ThumbsDown
+} from 'lucide-react'
 
 interface Message {
   id: string
@@ -66,7 +66,7 @@ export function ChatMessage({ message, onCopy, onRegenerate, isLast }: ChatMessa
                   onClick={handleCopy}
                   className="text-white/70 hover:text-white hover:bg-white/10 h-8 px-2"
                 >
-                  <ClipboardDocumentIcon className="w-4 h-4 mr-1" />
+                  <Copy className="w-4 h-4 mr-1" />
                   {copied ? 'Copied!' : 'Copy'}
                 </Button>
                 
@@ -77,7 +77,7 @@ export function ChatMessage({ message, onCopy, onRegenerate, isLast }: ChatMessa
                     onClick={onRegenerate}
                     className="text-white/70 hover:text-white hover:bg-white/10 h-8 px-2"
                   >
-                    <ArrowPathIcon className="w-4 h-4 mr-1" />
+                    <RotateCcw className="w-4 h-4 mr-1" />
                     Regenerate
                   </Button>
                 )}
@@ -87,7 +87,7 @@ export function ChatMessage({ message, onCopy, onRegenerate, isLast }: ChatMessa
                   size="sm"
                   className="text-white/70 hover:text-white hover:bg-white/10 h-8 px-2"
                 >
-                  <HandThumbUpIcon className="w-4 h-4" />
+                  <ThumbsUp className="w-4 h-4" />
                 </Button>
 
                 <Button
@@ -95,7 +95,7 @@ export function ChatMessage({ message, onCopy, onRegenerate, isLast }: ChatMessa
                   size="sm"
                   className="text-white/70 hover:text-white hover:bg-white/10 h-8 px-2"
                 >
-                  <HandThumbDownIcon className="w-4 h-4" />
+                  <ThumbsDown className="w-4 h-4" />
                 </Button>
               </div>
             )}
